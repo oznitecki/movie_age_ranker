@@ -33,7 +33,8 @@ trigram.py, bigram.py, unigram.py, topic-model.py
 the output would be a pickled set of features
 
 to test based on a testing csv use one of the ranker files:  
-trigram_ranker.py, bigram_ranker.py, unigram_ranker.py
+trigram_ranker.py, bigram_ranker.py, unigram_ranker.py  
+the output would be a result csv which can be compared to gold csv
 
 to evaluate results based on a gold csv use evaluate.py  
 example output:  
