@@ -50,7 +50,7 @@ for row in csvreader:
             mpaa = 'NC-17'
     else:
         mpaa = 'R'
-    """ bigrams = Set(nltk.bigrams(clean(row[2]).split()))
+        """bigrams = Set(nltk.bigrams(clean(row[2]).split()))
         if len(bigrams & (biSets['G'] | biSets['PG-13'] | biSets['R'] | biSets['NC-17'])) > 0:
             mpaa = 'G'
             if len(biSets['PG'] & bigrams) > 0:
@@ -61,20 +61,19 @@ for row in csvreader:
                 mpaa = 'R'
             if len(biSets['NC-17'] & bigrams) > 0:
                 mpaa = 'NC-17'
-        else:
-            mpaa = 'R'
-            plotwords = Set(clean(row[2]).split())
-            if len(plotwords - uniSets['G'] - uniSets['PG-13'] - uniSets['R'] - uniSets['NC-17']) <= 0.5*len(plotwords):
-                minimalHits = len(plotwords)/30
-                mpaa = 'G'
-                if len(uniSets['PG'] & plotwords) > minimalHits:
-                    mpaa = 'PG'
-                if len(uniSets['PG-13'] & plotwords) > minimalHits:
-                    mpaa = 'PG-13'
-                if len(uniSets['R'] & plotwords) > minimalHits:
-                    mpaa = 'R'
-                if len(uniSets['NC-17'] & plotwords) > minimalHits:
-                    mpaa = 'NC-17' """
+        else:"""
+        plotwords = Set(clean(row[2]).split())
+        if len(plotwords & (uniSets['G'] | uniSets['PG-13'] | uniSets['R'] | uniSets['NC-17'])) > 0:
+            minimalHits = len(plotwords)/30
+            mpaa = 'G'
+            if len(uniSets['PG'] & plotwords) > minimalHits:
+                mpaa = 'PG'
+            if len(uniSets['PG-13'] & plotwords) > minimalHits:
+                mpaa = 'PG-13'
+            if len(uniSets['R'] & plotwords) > minimalHits:
+                mpaa = 'R'
+            if len(uniSets['NC-17'] & plotwords) > minimalHits:
+                mpaa = 'NC-17' 
     writer.writerow({'id':row[0],'title': row[1], 'plot': row[2], 'mpaa': mpaa})
 f.close()
 f2.close()

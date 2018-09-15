@@ -55,13 +55,13 @@ train(wordSets,topicSets)
 
 diffSets = dict({"G":Set([]),"PG":Set([]),"PG-13":Set([]),"R":Set([]),"NC-17":Set([])})
 
-for item in topicSets['G'].most_common(350):#350 #>1
+for item in topicSets['G'].most_common(1000):#350 #>5
     topicSets['PG'].pop(item[0],None)
     topicSets['PG-13'].pop(item[0],None)
     topicSets['R'].pop(item[0],None)
     topicSets['NC-17'].pop(item[0],None)
     diffSets['G'].add(item[0])
-for item in topicSets['PG'].most_common(350):#350 #>2
+for item in topicSets['PG'].most_common(500):#350 #>6
     topicSets['PG-13'].pop(item[0],None)
     topicSets['R'].pop(item[0],None)
     topicSets['NC-17'].pop(item[0],None)
