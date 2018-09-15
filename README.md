@@ -28,3 +28,15 @@ putting movie 1 to test and gold
 putting movie 2 to test and gold  
 finished test and gold files  
 
+to train based on a training csv use one of the trainer files:  
+trigram.py, bigram.py, unigram.py, topic-model.py  
+the output would be a pickled set of features
+
+to test based on a testing csv use one of the ranker files:  
+trigram_ranker.py, bigram_ranker.py, unigram_ranker.py
+
+to evaluate results based on a gold csv use evaluate.py  
+example output:
+MSE:1.04952322362
+accuracy:0.632728391264
+![Alt text](confusion_matrix.jpg?raw=true)
