@@ -36,7 +36,7 @@ to test based on a testing csv use one of the ranker files:
 trigram_ranker.py, bigram_ranker.py, unigram_ranker.py
 
 to evaluate results based on a gold csv use evaluate.py  
-example output:
-MSE:1.04952322362
-accuracy:0.632728391264
-![Alt text](confusion_matrix.jpg?raw=true)
+example output:  
+MSE:1.04952322362  
+accuracy:0.632728391264  
+![AltText](confusion_matrix.png?raw=true)
