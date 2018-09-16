@@ -1,5 +1,7 @@
 # movie_age_ranker
-if you just want to use the program run user_interface.py and enjoy!
+if you just want to use the program:  
+first download output/trigram_diffSets.pkl  
+then run user_interface.py and enjoy!
 
 this program user interface takes a movie text description and gives back recommended age rating for the movie by mpaa scale.  
 mpaa scale - 'G','PG','PG-13','R','NC-17'  
